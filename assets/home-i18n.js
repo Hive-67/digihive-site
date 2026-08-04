@@ -173,6 +173,7 @@ function applyTheme(theme){
   localStorage.setItem(THEME_KEY, theme);
   const btn = document.getElementById('theme-toggle');
   if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+  if (window.renderHoneycombBg) window.renderHoneycombBg();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
