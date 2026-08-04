@@ -22,12 +22,12 @@
 
   /* Drapeaux — barre du header (dégradé fondu, 3 tons) */
   --flag-fr-stripe: linear-gradient(90deg, transparent 0%, #0055A4 18%, #ffffff 50%, #EF4135 82%, transparent 100%);
-  --flag-en-stripe: linear-gradient(90deg, transparent 0%, #00247D 18%, #ffffff 50%, #CF142B 82%, transparent 100%);
+  --flag-en-stripe: linear-gradient(90deg, transparent 0%, #012169 18%, #ffffff 50%, #C8102E 82%, transparent 100%);
   --flag-es-stripe: linear-gradient(90deg, transparent 0%, #AA151B 18%, #F1BF00 50%, #AA151B 82%, transparent 100%);
 
   /* Drapeaux — logo (2 tons, sans blanc pour rester lisible sur fond clair) */
   --flag-fr-logo: linear-gradient(120deg,#0055A4,#EF4135);
-  --flag-en-logo: linear-gradient(120deg,#00247D,#CF142B);
+  --flag-en-logo: linear-gradient(120deg,#012169,#C8102E);
   --flag-es-logo: linear-gradient(120deg,#AA151B,#F1BF00);
 }
 

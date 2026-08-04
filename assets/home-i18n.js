@@ -8,9 +8,8 @@
 const HOME_I18N = {
   en: {
     nav: {
-      accueil: 'Home', catalogue: 'Catalogue', templates: 'Discord Templates',
-      logiciels: 'Software', formations: 'Courses', services: 'Services',
-      compte: 'Account', suffix: ' · coming soon'
+      accueil: 'Home', catalogue: 'Catalogue', devis: 'Quote', contact: 'Contact',
+      rejoindre: 'Join us', compte: 'Account', suffix: ' · coming soon'
     },
     hero: {
       title: 'Digital products, ready to use, delivered turnkey.',
@@ -38,9 +37,8 @@ const HOME_I18N = {
   },
   es: {
     nav: {
-      accueil: 'Inicio', catalogue: 'Catálogo', templates: 'Plantillas Discord',
-      logiciels: 'Software', formations: 'Formaciones', services: 'Servicios',
-      compte: 'Cuenta', suffix: ' · próximamente'
+      accueil: 'Inicio', catalogue: 'Catálogo', devis: 'Presupuesto', contact: 'Contacto',
+      rejoindre: 'Únete', compte: 'Cuenta', suffix: ' · próximamente'
     },
     hero: {
       title: 'Productos digitales listos para usar, entregados llave en mano.',
