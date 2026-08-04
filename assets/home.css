@@ -19,7 +19,6 @@
   --h-shadow:0 10px 34px rgba(43,38,34,.07);
   --h-shadow-hover:0 16px 44px rgba(43,38,34,.11);
   --h-maxw:1180px;
-  --h-honey: rgba(43,38,34,.055);
 
   /* Drapeaux — barre du header (dégradé fondu, 3 tons) */
   --flag-fr-stripe: linear-gradient(90deg, transparent 0%, #0055A4 18%, #ffffff 50%, #EF4135 82%, transparent 100%);
@@ -41,7 +40,6 @@ body[data-page="accueil"][data-theme="dark"]{
   --h-brd:#3A322B;
   --h-shadow:0 10px 34px rgba(0,0,0,.35);
   --h-shadow-hover:0 16px 44px rgba(0,0,0,.45);
-  --h-honey: rgba(255,184,76,.09);
 }
 
 body[data-page="accueil"]{
@@ -52,25 +50,20 @@ body[data-page="accueil"]{
   position:relative;
 }
 
-/* ══ TEXTURE DE FOND — alvéoles nid d'abeilles (CSS pur, sans image) ═══
-   Petit motif hexagonal en dégradés superposés — net à tout zoom, aucune
-   couture de répétition, poids quasi nul. Couleur/contraste ajustés
-   par thème via --h-honey. */
+/* ══ TEXTURE DE FOND — alvéoles nid d'abeilles (SVG inline, sans fichier) ═
+   Vraies cellules hexagonales (vérifiées visuellement), pas de coupure de
+   répétition, poids négligeable. Deux variantes : claire / sombre. */
 body[data-page="accueil"]::before{
   content:'';
   position:fixed;
   inset:0;
-  background-image:
-    linear-gradient(30deg, var(--h-honey) 12%, transparent 12.5%, transparent 87%, var(--h-honey) 87.5%, var(--h-honey)),
-    linear-gradient(150deg, var(--h-honey) 12%, transparent 12.5%, transparent 87%, var(--h-honey) 87.5%, var(--h-honey)),
-    linear-gradient(30deg, var(--h-honey) 12%, transparent 12.5%, transparent 87%, var(--h-honey) 87.5%, var(--h-honey)),
-    linear-gradient(150deg, var(--h-honey) 12%, transparent 12.5%, transparent 87%, var(--h-honey) 87.5%, var(--h-honey)),
-    linear-gradient(60deg, var(--h-honey) 25%, transparent 25.5%, transparent 75%, var(--h-honey) 75%, var(--h-honey)),
-    linear-gradient(60deg, var(--h-honey) 25%, transparent 25.5%, transparent 75%, var(--h-honey) 75%, var(--h-honey));
-  background-size: 34px 59px;
-  background-position: 0 0, 0 0, 17px 29.5px, 17px 29.5px, 0 0, 17px 29.5px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='48.5' viewBox='0 0 28 48.5'%3E%3Cpolygon points='7,0 21,0 28,12.12 21,24.25 7,24.25 0,12.12' fill='none' stroke='rgba%2843%2C38%2C34%2C0.16%29' stroke-width='1'/%3E%3Cpolygon points='7,24.25 21,24.25 28,36.37 21,48.5 7,48.5 0,36.37' fill='none' stroke='rgba%2843%2C38%2C34%2C0.16%29' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 28px 48.5px;
   z-index:0;
   pointer-events:none;
+}
+body[data-page="accueil"][data-theme="dark"]::before{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='48.5' viewBox='0 0 28 48.5'%3E%3Cpolygon points='7,0 21,0 28,12.12 21,24.25 7,24.25 0,12.12' fill='none' stroke='rgba%28255%2C184%2C76%2C0.20%29' stroke-width='1'/%3E%3Cpolygon points='7,24.25 21,24.25 28,36.37 21,48.5 7,48.5 0,36.37' fill='none' stroke='rgba%28255%2C184%2C76%2C0.20%29' stroke-width='1'/%3E%3C/svg%3E");
 }
 
 body[data-page="accueil"] h1,
@@ -274,7 +267,7 @@ body[data-page="accueil"] .badge-exemple{
 }
 body[data-page="accueil"] .empty-state{ color:var(--h-tx2); }
 
-/* ══ FOOTER ═════════════════════════════════════════════════ */
+/* ══ FOOTER ══════════════════════════════════════════════ */
 body[data-page="accueil"] .site-footer{
   border-top:1px solid var(--h-brd);
   background:var(--h-surface);
