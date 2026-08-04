@@ -19,8 +19,8 @@ const HOME_I18N = {
     },
     concept: {
       eyebrow: 'The concept',
-      title: 'A solid base that grows with you',
-      text1: 'Whether you’re someone who’s tired of paying for a subscription app that never quite fits, or a professional who needs a tool built for their business — the principle is the same: we build you a base that’s 100% designed for you, working from day one, with zero technical knowledge required, and without breaking the bank.',
+      title: 'Build an app that actually looks like you',
+      text1: 'Stop paying for an app that doesn’t fit you 100%. Write your own, use it, and improve it over time.',
       text2: 'Your project grows? Ask for an addition or a tweak, we handle it for a minimum contribution of €1.'
     },
     audience: {
@@ -28,7 +28,7 @@ const HOME_I18N = {
       title: 'Who this is for',
       beginners: {
         sub: 'Zero code, zero stress',
-        title: 'Mr. & Mrs. Everyday',
+        title: 'Everyone',
         text: 'You have an idea but the technical side is blocking you. We define the need together with a quick brief, and deliver a turnkey tool. You use it, we handle the mechanics.'
       },
       tinkerers: {
@@ -45,9 +45,9 @@ const HOME_I18N = {
     method: {
       eyebrow: 'The method',
       title: 'A simple process, in 3 steps',
-      step1: { title: 'Scoping', text: 'A quick exchange — in person or through a fully online form — to define the exact structure of the tool.' },
+      step1: { title: 'Scoping', text: 'A quick exchange, in person or through a fully online form, to define the exact structure of the tool.' },
       step2: { title: 'Delivery', text: 'You receive the working base. You take control right away.' },
-      step3: { title: 'Iteration', text: 'You test it in real conditions. Spotted an improvement? Ask for the evolution, we roll it in right away.' }
+      step3: { title: 'Real-world test', text: 'You get it, use it, and note down the changes you want: we roll them in right away.' }
     },
     catSection: {
       eyebrow: 'Categories', title: 'One ecosystem, several worlds',
@@ -56,7 +56,7 @@ const HOME_I18N = {
     siteweb: {
       eyebrow: 'Other needs?',
       title: 'We also build your website',
-      text: 'Landing page, portfolio, multi-page site: we also design your website, fully custom. With or without content management, with or without hosting/deployment — you choose what you handle yourself and what we take care of for you.',
+      text: 'Landing page, portfolio, multi-page site: we also design your website, fully custom. With or without content management, with or without hosting/deployment: you choose what you handle yourself and what we take care of for you.',
       cta: 'See the website offers'
     },
     categories: {
@@ -79,8 +79,8 @@ const HOME_I18N = {
     },
     concept: {
       eyebrow: 'El concepto',
-      title: 'Una base sólida que crece contigo',
-      text1: 'Ya seas un particular cansado de pagar una suscripción por una app que nunca acaba de encajar contigo, o un profesional que necesita una herramienta pensada para su actividad — el principio es el mismo: te construimos una base pensada al 100 % para ti, que funciona desde el primer día, sin necesitar ningún conocimiento técnico, y sin arruinarte.',
+      title: 'Crea una app que realmente se parezca a ti',
+      text1: 'Deja de pagar por una aplicación que no te encaja al 100 %. Crea la tuya, úsala y mejórala con el tiempo.',
       text2: '¿Tu proyecto crece? Pídenos una mejora o un ajuste, nos encargamos por una aportación mínima de 1 €.'
     },
     audience: {
@@ -88,7 +88,7 @@ const HOME_I18N = {
       title: '¿A quién va dirigido?',
       beginners: {
         sub: 'Cero código, cero estrés',
-        title: 'Don y Doña Cualquiera',
+        title: 'Todo el mundo',
         text: 'Tienes una idea pero la parte técnica te bloquea. Definimos la necesidad juntos con un briefing rápido, y te entregamos una herramienta llave en mano. Tú la usas, nosotros nos ocupamos de la mecánica.'
       },
       tinkerers: {
@@ -105,9 +105,9 @@ const HOME_I18N = {
     method: {
       eyebrow: 'El método',
       title: 'Un proceso simple, en 3 pasos',
-      step1: { title: 'Definición', text: 'Un intercambio rápido — en directo o mediante un formulario 100 % online — para definir la estructura exacta de la herramienta.' },
+      step1: { title: 'Definición', text: 'Un intercambio rápido, en directo o mediante un formulario 100 % online, para definir la estructura exacta de la herramienta.' },
       step2: { title: 'Entrega', text: 'Recibes la base funcional. Tomas el control de inmediato.' },
-      step3: { title: 'Iteración', text: 'La pruebas en condiciones reales. ¿Detectas una mejora? Pides la evolución, la integramos enseguida.' }
+      step3: { title: 'Prueba en condiciones reales', text: 'Lo recibes, lo usas y anotas los cambios que quieres: los integramos enseguida.' }
     },
     catSection: {
       eyebrow: 'Categorías', title: 'Un ecosistema, varios universos',
@@ -116,7 +116,7 @@ const HOME_I18N = {
     siteweb: {
       eyebrow: '¿Otra necesidad?',
       title: 'También creamos tu sitio web',
-      text: 'Landing, portfolio, varias páginas: también diseñamos tu sitio web, totalmente a medida. Con o sin gestión de contenido, con o sin puesta en línea — tú eliges qué gestionas tú mismo y qué nos encargamos nosotros.',
+      text: 'Landing, portfolio, varias páginas: también diseñamos tu sitio web, totalmente a medida. Con o sin gestión de contenido, con o sin puesta en línea: tú eliges qué gestionas tú mismo y qué nos encargamos nosotros.',
       cta: 'Ver las ofertas de sitio web'
     },
     categories: {
