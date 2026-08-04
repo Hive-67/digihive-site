@@ -8,6 +8,8 @@
 
 :root{
   --h-bg:#F2E9DC;
+  --h-bg-start:#FAF4E9;
+  --h-bg-end:#E9DBC2;
   --h-surface:#FFFFFF;
   --h-tx:#2B2622;
   --h-tx2:#7A7168;
@@ -34,6 +36,8 @@
 /* ══ MODE SOMBRE — variables ══════════════════════════════════════ */
 body[data-page="accueil"][data-theme="dark"]{
   --h-bg:#33241A;
+  --h-bg-start:#3D2B1D;
+  --h-bg-end:#211712;
   --h-surface:#3F2C1E;
   --h-tx:#F5EFE8;
   --h-tx2:#C9B29B;
@@ -43,34 +47,12 @@ body[data-page="accueil"][data-theme="dark"]{
 }
 
 body[data-page="accueil"]{
-  background:var(--h-bg);
+  background:linear-gradient(135deg, var(--h-bg-start) 0%, var(--h-bg-end) 100%);
+  background-attachment:fixed;
   color:var(--h-tx);
   font-family:'Inter',sans-serif;
   transition:background .25s ease, color .25s ease;
   position:relative;
-}
-
-/* ══ TEXTURE DE FOND — alvéoles bombées façon nid d'abeilles (canvas) ══
-   Portage fidèle de l'algorithme de référence (hexagones pointe-en-haut,
-   damier, dégradé radial "bombé" par cellule, ombre portée), dessiné en
-   JS dans assets/home-honeycomb.js avec les couleurs actuelles du site. */
-body[data-page="accueil"] #honeycomb-bg{
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  display:block;
-  z-index:0;
-  pointer-events:none;
-}
-/* Le canvas est "position:fixed" donc peint au-dessus du contenu statique ;
-   on repasse le contenu réel devant explicitement. */
-body[data-page="accueil"] .hive-stripe,
-body[data-page="accueil"] .site-header,
-body[data-page="accueil"] main,
-body[data-page="accueil"] .site-footer{
-  position:relative;
-  z-index:1;
 }
 
 body[data-page="accueil"] h1,
