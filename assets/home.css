@@ -7,9 +7,7 @@
 ════════════════════════════════════════════════════════════════════════════════════ */
 
 :root{
-  --h-bg:#F2E9DC;
-  --h-bg-start:#FAF4E9;
-  --h-bg-end:#E9DBC2;
+  --h-bg:#FAF7F2;
   --h-surface:#FFFFFF;
   --h-tx:#2B2622;
   --h-tx2:#7A7168;
@@ -35,24 +33,20 @@
 
 /* ══ MODE SOMBRE — variables ══════════════════════════════════════ */
 body[data-page="accueil"][data-theme="dark"]{
-  --h-bg:#33241A;
-  --h-bg-start:#3D2B1D;
-  --h-bg-end:#211712;
-  --h-surface:#3F2C1E;
+  --h-bg:#1C1815;
+  --h-surface:#26201C;
   --h-tx:#F5EFE8;
-  --h-tx2:#C9B29B;
-  --h-brd:#4A3826;
+  --h-tx2:#B3A89B;
+  --h-brd:#3A322B;
   --h-shadow:0 10px 34px rgba(0,0,0,.35);
   --h-shadow-hover:0 16px 44px rgba(0,0,0,.45);
 }
 
 body[data-page="accueil"]{
-  background:linear-gradient(135deg, var(--h-bg-start) 0%, var(--h-bg-end) 100%);
-  background-attachment:fixed;
+  background:var(--h-bg);
   color:var(--h-tx);
   font-family:'Inter',sans-serif;
   transition:background .25s ease, color .25s ease;
-  position:relative;
 }
 
 body[data-page="accueil"] h1,
@@ -256,7 +250,7 @@ body[data-page="accueil"] .badge-exemple{
 }
 body[data-page="accueil"] .empty-state{ color:var(--h-tx2); }
 
-/* ══ FOOTER ══════════════════════════════════════════════ */
+/* ══ FOOTER ═════════════════════════════════════════════════ */
 body[data-page="accueil"] .site-footer{
   border-top:1px solid var(--h-brd);
   background:var(--h-surface);
