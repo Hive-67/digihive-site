@@ -15,7 +15,9 @@
   --tx:#f5f5f5;
   --tx2:#b8a7b5;
   --ac:#b01678;
-  --grad:linear-gradient(90deg,#7d206f,#b01678,#c21758,#da1d33,#eb1925);
+  --bleu:#0055a4;
+  --rouge:#ef4135;
+  --grad:linear-gradient(90deg, transparent 0%, var(--bleu) 18%, #ffffff 50%, var(--rouge) 82%, transparent 100%);
   --radius:10px;
   --maxw:1180px;
 }
@@ -50,9 +52,8 @@ button{ font-family:inherit; cursor:pointer; }
 
 /* ══ STRIPE + HEADER ════════════════════════════════════ */
 .hive-stripe{
-  height:4px;
+  height:3px;
   background:var(--grad);
-  box-shadow:0 0 12px rgba(196,25,60,.4);
 }
 
 .site-header{
