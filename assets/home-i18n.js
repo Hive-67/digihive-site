@@ -12,10 +12,41 @@ const HOME_I18N = {
       rejoindre: 'Join us', compte: 'Account', suffix: ' · coming soon'
     },
     hero: {
-      title: 'Digital products, ready to use, delivered turnkey.',
-      text: 'Discord templates, custom software, courses and services: every DigiHive product is designed to save you time — documented and ready to use from the moment you buy it.',
-      ctaPrimary: 'Browse the catalogue',
-      ctaGhost: 'Explore the software'
+      title: 'Custom-made digital tools shouldn’t be a luxury.',
+      text: 'Software, servers, systems. You bring the idea, we handle the technical side. Ready to use, endlessly evolvable, and fairly priced.',
+      ctaPrimary: 'Discover the concept',
+      ctaGhost: 'Browse the catalogue'
+    },
+    concept: {
+      eyebrow: 'The concept',
+      title: 'A solid base that grows with you',
+      text: 'Why pay for a bloated all-in-one when you’ll only use 10% of it? Start from an ultra-accessible base tool (from €5) that does exactly what you need today. Your project grows? Ask for an addition or a tweak. We handle it for a small fee (e.g. €1/request).'
+    },
+    audience: {
+      eyebrow: 'Who it’s for',
+      title: 'Who this is for',
+      beginners: {
+        sub: 'Zero code, zero stress',
+        title: 'Beginners',
+        text: 'You have an idea but the technical side is blocking you. We define the need together with a quick brief, and deliver a turnkey tool. You use it, we handle the mechanics.'
+      },
+      tinkerers: {
+        sub: 'A clean base',
+        title: 'Tinkerers',
+        text: 'Save 50 hours of setup. Get sound, structured, documented foundations for your projects. Tinker with the code yourself, or let us handle the complex requests for you.'
+      },
+      pros: {
+        sub: 'ROI and process',
+        title: 'Professionals',
+        text: 'Tools that adapt to your operational and logistics flows, without an agency budget. A reliable, repeatable solution that simplifies your team’s day-to-day work.'
+      }
+    },
+    method: {
+      eyebrow: 'The method',
+      title: 'A simple process, in 3 steps',
+      step1: { title: 'Scoping', text: 'A quick exchange to define the exact structure of the tool.' },
+      step2: { title: 'Delivery', text: 'You receive the working base. You take control right away.' },
+      step3: { title: 'Iteration', text: 'You test it in real conditions. Spotted an improvement? Ask for the evolution, we roll it in right away.' }
     },
     catSection: {
       eyebrow: 'Categories', title: 'One ecosystem, several worlds',
@@ -41,10 +72,41 @@ const HOME_I18N = {
       rejoindre: 'Únete', compte: 'Cuenta', suffix: ' · próximamente'
     },
     hero: {
-      title: 'Productos digitales listos para usar, entregados llave en mano.',
-      text: 'Plantillas de Discord, software a medida, formaciones y servicios: cada producto DigiHive está pensado para ahorrarte tiempo, documentado y listo para usar desde la compra.',
-      ctaPrimary: 'Ver el catálogo',
-      ctaGhost: 'Descubrir el software'
+      title: 'La tecnología a medida no debería ser un lujo.',
+      text: 'Software, servidores, sistemas. Tú tienes la idea, nosotros nos encargamos de la técnica. Listo para usar, evolutivo al infinito y a precio justo.',
+      ctaPrimary: 'Descubrir el concepto',
+      ctaGhost: 'Ver el catálogo'
+    },
+    concept: {
+      eyebrow: 'El concepto',
+      title: 'Una base sólida que crece contigo',
+      text: '¿Por qué pagar una herramienta gigante si solo vas a usar el 10% de sus funciones? Parte de una herramienta base ultra accesible (desde 5 €) que hace exactamente lo que necesitas hoy. ¿Tu proyecto crece? Pídenos una mejora o un ajuste. Nos encargamos por una aportación mínima (ej.: 1 €/solicitud).'
+    },
+    audience: {
+      eyebrow: '¿Para quién?',
+      title: '¿A quién va dirigido?',
+      beginners: {
+        sub: 'Cero código, cero estrés',
+        title: 'Principiantes',
+        text: 'Tienes una idea pero la parte técnica te bloquea. Definimos la necesidad juntos con un briefing rápido, y te entregamos una herramienta llave en mano. Tú la usas, nosotros nos ocupamos de la mecánica.'
+      },
+      tinkerers: {
+        sub: 'La base limpia',
+        title: 'Manitas',
+        text: 'Ahorra 50 horas de configuración. Recibe bases sólidas, estructuradas y documentadas para tus proyectos. Diviértete modificando el código, o déjanos gestionar las solicitudes complejas por ti.'
+      },
+      pros: {
+        sub: 'ROI y proceso',
+        title: 'Profesionales',
+        text: 'Herramientas que se adaptan a tus flujos operativos y logísticos, sin el presupuesto de una agencia. Una solución fiable y repetible que simplifica el trabajo diario de tu equipo.'
+      }
+    },
+    method: {
+      eyebrow: 'El método',
+      title: 'Un proceso simple, en 3 pasos',
+      step1: { title: 'Definición', text: 'Un intercambio rápido para definir la estructura exacta de la herramienta.' },
+      step2: { title: 'Entrega', text: 'Recibes la base funcional. Tomas el control de inmediato.' },
+      step3: { title: 'Iteración', text: 'La pruebas en condiciones reales. ¿Detectas una mejora? Pides la evolución, la integramos enseguida.' }
     },
     catSection: {
       eyebrow: 'Categorías', title: 'Un ecosistema, varios universos',
@@ -151,7 +213,7 @@ function applyLanguage(lang){
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const val = getTranslation(lang, el.getAttribute('data-i18n'));
-    if (val !== undefined) el.textContent = val;
+    el.textContent = (val !== undefined) ? val : el.dataset.i18nFr;
   });
 
   const compteLink = document.querySelector('.nav-disabled');
@@ -176,6 +238,10 @@ function applyTheme(theme){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.dataset.i18nFr = el.textContent;
+  });
+
   const savedLang = localStorage.getItem(LANG_KEY) || 'fr';
   const savedTheme = localStorage.getItem(THEME_KEY)
     || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
