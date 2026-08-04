@@ -52,7 +52,7 @@ body[data-page="accueil"]{
 body[data-page="accueil"] h1,
 body[data-page="accueil"] h2,
 body[data-page="accueil"] h3{
-  font-family:'Syne',sans-serif;
+  font-family:'Sora',sans-serif;
   font-weight:700;
   color:var(--h-tx);
 }
@@ -84,7 +84,7 @@ body[data-page="accueil"][data-theme="dark"] .site-header{
 }
 
 body[data-page="accueil"] .logo{
-  font-family:'Syne',sans-serif;
+  font-family:'Sora',sans-serif;
   font-weight:800;
   background:var(--flag-fr-logo);
   -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
@@ -214,6 +214,10 @@ body[data-page="accueil"] .concept-text{
   line-height:1.85;
   color:var(--h-tx2);
 }
+body[data-page="accueil"] .concept-text + .concept-text{ margin-top:1.1rem; }
+body[data-page="accueil"] .concept-cta{
+  display:flex; justify-content:center; margin-top:1.8rem;
+}
 
 /* ══ À QUI ÇA S'ADRESSE — 3 colonnes ══════════════════════════════════ */
 body[data-page="accueil"] .audience-grid{
@@ -327,7 +331,7 @@ body[data-page="accueil"] .prod-tag{
 body[data-page="accueil"] .prod-card h3{ font-size:1rem; }
 body[data-page="accueil"] .prod-card p{ color:var(--h-tx2); }
 body[data-page="accueil"] .prod-price{
-  font-family:'Syne',sans-serif; color:var(--h-tx);
+  font-family:'Sora',sans-serif; color:var(--h-tx);
 }
 body[data-page="accueil"] .badge-exemple{
   color:var(--h-tx2); border:1px dashed var(--h-brd);

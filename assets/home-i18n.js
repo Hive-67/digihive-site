@@ -20,14 +20,15 @@ const HOME_I18N = {
     concept: {
       eyebrow: 'The concept',
       title: 'A solid base that grows with you',
-      text: 'Why pay for a bloated all-in-one when you’ll only use 10% of it? Start from an ultra-accessible base tool (from €5) that does exactly what you need today. Your project grows? Ask for an addition or a tweak. We handle it for a small fee (e.g. €1/request).'
+      text1: 'Whether you’re someone who’s tired of paying for a subscription app that never quite fits, or a professional who needs a tool built for their business — the principle is the same: we build you a base that’s 100% designed for you, working from day one, with zero technical knowledge required, and without breaking the bank.',
+      text2: 'Your project grows? Ask for an addition or a tweak, we handle it for a minimum contribution of €1.'
     },
     audience: {
       eyebrow: 'Who it’s for',
       title: 'Who this is for',
       beginners: {
         sub: 'Zero code, zero stress',
-        title: 'Beginners',
+        title: 'Mr. & Mrs. Everyday',
         text: 'You have an idea but the technical side is blocking you. We define the need together with a quick brief, and deliver a turnkey tool. You use it, we handle the mechanics.'
       },
       tinkerers: {
@@ -44,7 +45,7 @@ const HOME_I18N = {
     method: {
       eyebrow: 'The method',
       title: 'A simple process, in 3 steps',
-      step1: { title: 'Scoping', text: 'A quick exchange to define the exact structure of the tool.' },
+      step1: { title: 'Scoping', text: 'A quick exchange — in person or through a fully online form — to define the exact structure of the tool.' },
       step2: { title: 'Delivery', text: 'You receive the working base. You take control right away.' },
       step3: { title: 'Iteration', text: 'You test it in real conditions. Spotted an improvement? Ask for the evolution, we roll it in right away.' }
     },
@@ -52,19 +53,18 @@ const HOME_I18N = {
       eyebrow: 'Categories', title: 'One ecosystem, several worlds',
       text: 'Each category works differently, but everything is managed in the same place.'
     },
-    featSection: { eyebrow: 'Selection', title: 'Featured products' },
+    siteweb: {
+      eyebrow: 'Other needs?',
+      title: 'We also build your website',
+      text: 'Landing page, portfolio, multi-page site: we also design your website, fully custom. With or without content management, with or without hosting/deployment — you choose what you handle yourself and what we take care of for you.',
+      cta: 'See the website offers'
+    },
     categories: {
       logiciel: { nom: 'Software', accroche: 'Your own software, without software prices.' },
       template: { nom: 'Discord Templates', accroche: 'Your Discord server, ready in one command.' },
       formation: { nom: 'Courses', accroche: 'Learn to do yourself what others charge for.' },
-      service: { nom: 'Custom Services', accroche: 'Your project, designed and delivered by someone who knows the craft.' }
-    },
-    products: {
-      'pack-initial-gaming': { titre: 'Initial Gaming Pack', desc: 'Full Discord architecture: 16 categories, 75 channels, roles and permissions pre-calibrated.' },
-      'formation-bots-discord': { titre: 'Discord Bots Course', desc: 'A complete course to build and configure your own Discord bots, Scriptbe agent included.' },
-      'exemple-suivi-budget': { titre: 'Budget Tracker', desc: 'Example — personal budget tracking software, customizable on request.' }
-    },
-    misc: { exemple: 'Example', inclus: 'Included', agent: 'AI Agents' }
+      service: { nom: 'Custom Creations', accroche: 'Your project, designed and delivered by someone who knows the craft.' }
+    }
   },
   es: {
     nav: {
@@ -80,14 +80,15 @@ const HOME_I18N = {
     concept: {
       eyebrow: 'El concepto',
       title: 'Una base sólida que crece contigo',
-      text: '¿Por qué pagar una herramienta gigante si solo vas a usar el 10% de sus funciones? Parte de una herramienta base ultra accesible (desde 5 €) que hace exactamente lo que necesitas hoy. ¿Tu proyecto crece? Pídenos una mejora o un ajuste. Nos encargamos por una aportación mínima (ej.: 1 €/solicitud).'
+      text1: 'Ya seas un particular cansado de pagar una suscripción por una app que nunca acaba de encajar contigo, o un profesional que necesita una herramienta pensada para su actividad — el principio es el mismo: te construimos una base pensada al 100 % para ti, que funciona desde el primer día, sin necesitar ningún conocimiento técnico, y sin arruinarte.',
+      text2: '¿Tu proyecto crece? Pídenos una mejora o un ajuste, nos encargamos por una aportación mínima de 1 €.'
     },
     audience: {
       eyebrow: '¿Para quién?',
       title: '¿A quién va dirigido?',
       beginners: {
         sub: 'Cero código, cero estrés',
-        title: 'Principiantes',
+        title: 'Don y Doña Cualquiera',
         text: 'Tienes una idea pero la parte técnica te bloquea. Definimos la necesidad juntos con un briefing rápido, y te entregamos una herramienta llave en mano. Tú la usas, nosotros nos ocupamos de la mecánica.'
       },
       tinkerers: {
@@ -104,7 +105,7 @@ const HOME_I18N = {
     method: {
       eyebrow: 'El método',
       title: 'Un proceso simple, en 3 pasos',
-      step1: { title: 'Definición', text: 'Un intercambio rápido para definir la estructura exacta de la herramienta.' },
+      step1: { title: 'Definición', text: 'Un intercambio rápido — en directo o mediante un formulario 100 % online — para definir la estructura exacta de la herramienta.' },
       step2: { title: 'Entrega', text: 'Recibes la base funcional. Tomas el control de inmediato.' },
       step3: { title: 'Iteración', text: 'La pruebas en condiciones reales. ¿Detectas una mejora? Pides la evolución, la integramos enseguida.' }
     },
@@ -112,71 +113,29 @@ const HOME_I18N = {
       eyebrow: 'Categorías', title: 'Un ecosistema, varios universos',
       text: 'Cada categoría funciona a su manera, pero todo se gestiona en el mismo lugar.'
     },
-    featSection: { eyebrow: 'Selección', title: 'Productos destacados' },
+    siteweb: {
+      eyebrow: '¿Otra necesidad?',
+      title: 'También creamos tu sitio web',
+      text: 'Landing, portfolio, varias páginas: también diseñamos tu sitio web, totalmente a medida. Con o sin gestión de contenido, con o sin puesta en línea — tú eliges qué gestionas tú mismo y qué nos encargamos nosotros.',
+      cta: 'Ver las ofertas de sitio web'
+    },
     categories: {
       logiciel: { nom: 'Software', accroche: 'Tu software, sin precios de software.' },
       template: { nom: 'Plantillas Discord', accroche: 'Tu servidor Discord, listo en un comando.' },
       formation: { nom: 'Formaciones', accroche: 'Aprende a hacer tú mismo lo que otros cobran.' },
-      service: { nom: 'Servicios a Medida', accroche: 'Tu proyecto, pensado y entregado por alguien que entiende del tema.' }
-    },
-    products: {
-      'pack-initial-gaming': { titre: 'Pack Inicial Gaming', desc: 'Arquitectura Discord completa: 16 categorías, 75 canales, roles y permisos precalibrados.' },
-      'formation-bots-discord': { titre: 'Formación Bots Discord', desc: 'Formación completa para crear y configurar tus propios bots de Discord, agente Scriptbe incluido.' },
-      'exemple-suivi-budget': { titre: 'Control de Presupuesto', desc: 'Ejemplo — software de control de presupuesto personal, personalizable a petición.' }
-    },
-    misc: { exemple: 'Ejemplo', inclus: 'Incluido', agent: 'Agentes IA' }
+      service: { nom: 'Creaciones a Medida', accroche: 'Tu proyecto, pensado y entregado por alguien que entiende del tema.' }
+    }
   }
 };
 
 const LANG_KEY = 'digihive-lang';
 const THEME_KEY = 'digihive-theme';
 
-function fmtPriceHome(p){
-  if (p === null || p === undefined) return '';
-  if (typeof p === 'string') return p + ' €';
-  return (Number.isInteger(p) ? p : p.toFixed(2)) + ' €';
-}
-
 function getTranslation(lang, path){
   if (lang === 'fr') return undefined;
   const dict = HOME_I18N[lang];
   if (!dict) return undefined;
   return path.split('.').reduce((node, key) => (node ? node[key] : undefined), dict);
-}
-
-function typeLabelsFor(lang){
-  if (lang === 'fr') return FILTER_LABELS;
-  const c = HOME_I18N[lang].categories;
-  return {
-    template: c.template.nom, logiciel: c.logiciel.nom,
-    formation: c.formation.nom, service: c.service.nom,
-    agent: HOME_I18N[lang].misc.agent
-  };
-}
-
-function productCardHomeHTML(p, lang){
-  const tr = lang !== 'fr' ? HOME_I18N[lang].products[p.id] : null;
-  const titre = tr ? tr.titre : p.titre;
-  const desc = tr ? tr.desc : p.description_courte;
-  const labels = lang === 'fr'
-    ? { exemple: 'Exemple', inclus: 'Inclus' }
-    : { exemple: HOME_I18N[lang].misc.exemple, inclus: HOME_I18N[lang].misc.inclus };
-
-  const priceBlock = p.statut === 'exemple'
-    ? `<span class="badge-exemple">${labels.exemple}</span>`
-    : p.statut === 'inclus_avec'
-      ? `<span class="badge-exemple">${labels.inclus}</span>`
-      : `<span class="prod-price">${fmtPriceHome(p.prix)}</span>`;
-
-  const typeLabels = typeLabelsFor(lang);
-
-  return `
-    <a class="prod-card" href="produit.html?id=${encodeURIComponent(p.id)}">
-      <span class="prod-tag">${typeLabels[p.type] || p.type}</span>
-      <h3>${titre}</h3>
-      <p>${desc}</p>
-      <div class="prod-foot">${priceBlock}</div>
-    </a>`;
 }
 
 function renderHomeCategoriesI18n(lang){
@@ -197,15 +156,6 @@ function renderHomeCategoriesI18n(lang){
   }).join('');
 }
 
-function renderHomeFeaturedI18n(lang){
-  const el = document.getElementById('home-featured');
-  if (!el) return;
-  const featured = PRODUCTS.filter(p => p.featured);
-  el.innerHTML = featured.length
-    ? featured.map(p => productCardHomeHTML(p, lang)).join('')
-    : `<p class="empty-state"></p>`;
-}
-
 function applyLanguage(lang){
   document.body.setAttribute('data-lang', lang);
   document.documentElement.setAttribute('lang', lang);
@@ -223,7 +173,6 @@ function applyLanguage(lang){
   }
 
   renderHomeCategoriesI18n(lang);
-  renderHomeFeaturedI18n(lang);
 
   document.querySelectorAll('.lang-switch button').forEach(b => {
     b.classList.toggle('active', b.dataset.lang === lang);

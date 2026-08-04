@@ -87,7 +87,7 @@ const CATEGORIES = [
   },
   {
     type: 'service',
-    nom: 'Services Sur-Mesure',
+    nom: 'Créations Sur-Mesure',
     accroche: "Ton projet, pensé et livré par quelqu'un qui s'y connaît.",
     constat: "Les besoins uniques ne rentrent pas toujours dans une case standard, et le freelance classique coûte cher et manque de suivi.",
     solution: "Serveurs sur-mesure, sites web personnalisés, audits de sécurité et consulting, avec un cahier des charges signé en amont.",
