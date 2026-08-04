@@ -21,7 +21,7 @@ const HOME_I18N = {
       eyebrow: 'The concept',
       title: 'Build an app that actually looks like you',
       text1: 'Stop paying for an app that doesn’t fit you 100%. Write your own, use it, and improve it over time.',
-      text2: 'Your project grows? Ask for an addition or a tweak, we handle it for a minimum contribution of €1.'
+      text2: 'Your project grows? Ask for an addition or a tweak, we take care of it for you.'
     },
     audience: {
       eyebrow: 'Who it’s for',
@@ -81,7 +81,7 @@ const HOME_I18N = {
       eyebrow: 'El concepto',
       title: 'Crea una app que realmente se parezca a ti',
       text1: 'Deja de pagar por una aplicación que no te encaja al 100 %. Crea la tuya, úsala y mejórala con el tiempo.',
-      text2: '¿Tu proyecto crece? Pídenos una mejora o un ajuste, nos encargamos por una aportación mínima de 1 €.'
+      text2: '¿Tu proyecto crece? Pídenos una mejora o un ajuste, nosotros nos encargamos.'
     },
     audience: {
       eyebrow: '¿Para quién?',
