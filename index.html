@@ -8,21 +8,29 @@
 <link rel="stylesheet" href="assets/styles.css">
 <link rel="stylesheet" href="assets/home.css">
 </head>
-<body data-page="accueil">
+<body data-page="accueil" data-lang="fr" data-theme="light">
 
 <div class="hive-stripe"></div>
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo">⬡ DigiHive</a>
     <nav class="main-nav" id="main-nav">
-      <a href="index.html">Accueil</a>
-      <a href="catalogue.html">Catalogue</a>
-      <a href="categorie.html?type=template">Templates Discord</a>
-      <a href="categorie.html?type=logiciel">Logiciels</a>
-      <a href="categorie.html?type=formation">Formations</a>
-      <a href="categorie.html?type=service">Services</a>
-      <a href="compte.html" class="nav-disabled">Compte</a>
+      <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+      <a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a>
+      <a href="categorie.html?type=template" data-i18n="nav.templates">Templates Discord</a>
+      <a href="categorie.html?type=logiciel" data-i18n="nav.logiciels">Logiciels</a>
+      <a href="categorie.html?type=formation" data-i18n="nav.formations">Formations</a>
+      <a href="categorie.html?type=service" data-i18n="nav.services">Services</a>
+      <a href="compte.html" class="nav-disabled" data-i18n="nav.compte" data-suffix=" · bientôt">Compte</a>
     </nav>
+    <div class="header-controls">
+      <div class="lang-switch" role="group" aria-label="Langue">
+        <button type="button" data-lang="fr" class="active">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
+      </div>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">🌙</button>
+    </div>
     <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
   </div>
 </header>
@@ -30,27 +38,27 @@
 <main>
   <section class="hero wrap">
     <span class="eyebrow">✨ Powered by HiveOS</span>
-    <h1>Des produits numériques clés en main, prêts à l'emploi.</h1>
-    <p>Templates Discord, logiciels sur-mesure, formations et services : chaque produit DigiHive est pensé pour te faire gagner du temps, documenté et prêt à l'emploi dès l'achat.</p>
+    <h1 data-i18n="hero.title">Des produits numériques clés en main, prêts à l'emploi.</h1>
+    <p data-i18n="hero.text">Templates Discord, logiciels sur-mesure, formations et services : chaque produit DigiHive est pensé pour te faire gagner du temps, documenté et prêt à l'emploi dès l'achat.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="catalogue.html">Voir le catalogue</a>
-      <a class="btn btn-ghost" href="categorie.html?type=logiciel">Découvrir les logiciels</a>
+      <a class="btn btn-primary" href="catalogue.html" data-i18n="hero.ctaPrimary">Voir le catalogue</a>
+      <a class="btn btn-ghost" href="categorie.html?type=logiciel" data-i18n="hero.ctaGhost">Découvrir les logiciels</a>
     </div>
   </section>
 
   <section class="section wrap">
     <div class="section-head">
-      <span class="eyebrow">Catégories</span>
-      <h2>Un écosystème, plusieurs univers</h2>
-      <p>Chaque catégorie a son propre fonctionnement, mais tout se gère au même endroit.</p>
+      <span class="eyebrow" data-i18n="catSection.eyebrow">Catégories</span>
+      <h2 data-i18n="catSection.title">Un écosystème, plusieurs univers</h2>
+      <p data-i18n="catSection.text">Chaque catégorie a son propre fonctionnement, mais tout se gère au même endroit.</p>
     </div>
     <div class="cat-grid" id="home-categories"></div>
   </section>
 
   <section class="section wrap">
     <div class="section-head">
-      <span class="eyebrow">Sélection</span>
-      <h2>Produits phares</h2>
+      <span class="eyebrow" data-i18n="featSection.eyebrow">Sélection</span>
+      <h2 data-i18n="featSection.title">Produits phares</h2>
     </div>
     <div class="prod-grid" id="home-featured"></div>
   </section>
@@ -65,5 +73,6 @@
 
 <script src="assets/data.js"></script>
 <script src="assets/app.js"></script>
+<script src="assets/home-i18n.js"></script>
 </body>
 </html>

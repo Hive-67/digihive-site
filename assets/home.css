@@ -1,6 +1,7 @@
 /* ════════════════════════════════════════════════════════════════════════════════
    DIGIHIVE.COM — ACCUEIL — NOUVELLE CHARTE (en essai, page d'accueil uniquement)
-   Palette claire et chaleureuse, typographie ronde, cards "fenêtres" douces.
+   Palette claire et chaleureuse, typographie ronde, cards "fenêtres" douces,
+   mode sombre, et barre/logo aux couleurs du drapeau selon la langue active.
    N'affecte que index.html — les autres pages gardent l'ancien design
    en attendant la validation de cette direction.
 ════════════════════════════════════════════════════════════════════════════════════ */
@@ -18,12 +19,34 @@
   --h-shadow:0 10px 34px rgba(43,38,34,.07);
   --h-shadow-hover:0 16px 44px rgba(43,38,34,.11);
   --h-maxw:1180px;
+
+  /* Drapeaux — barre du header (dégradé fondu, 3 tons) */
+  --flag-fr-stripe: linear-gradient(90deg, transparent 0%, #0055A4 18%, #ffffff 50%, #EF4135 82%, transparent 100%);
+  --flag-en-stripe: linear-gradient(90deg, transparent 0%, #00247D 18%, #ffffff 50%, #CF142B 82%, transparent 100%);
+  --flag-es-stripe: linear-gradient(90deg, transparent 0%, #AA151B 18%, #F1BF00 50%, #AA151B 82%, transparent 100%);
+
+  /* Drapeaux — logo (2 tons, sans blanc pour rester lisible sur fond clair) */
+  --flag-fr-logo: linear-gradient(120deg,#0055A4,#EF4135);
+  --flag-en-logo: linear-gradient(120deg,#00247D,#CF142B);
+  --flag-es-logo: linear-gradient(120deg,#AA151B,#F1BF00);
+}
+
+/* ══ MODE SOMBRE — variables ══════════════════════════════════════ */
+body[data-page="accueil"][data-theme="dark"]{
+  --h-bg:#1C1815;
+  --h-surface:#26201C;
+  --h-tx:#F5EFE8;
+  --h-tx2:#B3A89B;
+  --h-brd:#3A322B;
+  --h-shadow:0 10px 34px rgba(0,0,0,.35);
+  --h-shadow-hover:0 16px 44px rgba(0,0,0,.45);
 }
 
 body[data-page="accueil"]{
   background:var(--h-bg);
   color:var(--h-tx);
   font-family:'Inter',sans-serif;
+  transition:background .25s ease, color .25s ease;
 }
 
 body[data-page="accueil"] h1,
@@ -36,20 +59,35 @@ body[data-page="accueil"] h3{
 
 body[data-page="accueil"] .wrap{ max-width:var(--h-maxw); }
 
-/* ══ HEADER ══════════════════════════════════════════════════ */
-body[data-page="accueil"] .hive-stripe{ display:none; }
+/* ══ BARRE DRAPEAU + HEADER ════════════════════════════════════════ */
+body[data-page="accueil"] .hive-stripe{
+  height:3px;
+  background:var(--flag-fr-stripe);
+  transition:background .3s ease;
+}
+body[data-page="accueil"][data-lang="en"] .hive-stripe{ background:var(--flag-en-stripe); }
+body[data-page="accueil"][data-lang="es"] .hive-stripe{ background:var(--flag-es-stripe); }
 
 body[data-page="accueil"] .site-header{
   background:rgba(250,247,242,.85);
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--h-brd);
+  transition:background .25s ease, border-color .25s ease;
 }
+body[data-page="accueil"][data-theme="dark"] .site-header{
+  background:rgba(28,24,21,.85);
+}
+
 body[data-page="accueil"] .logo{
   font-family:'Poppins',sans-serif;
   font-weight:700;
-  background:var(--h-grad);
+  background:var(--flag-fr-logo);
   -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  transition:background .3s ease;
 }
+body[data-page="accueil"][data-lang="en"] .logo{ background:var(--flag-en-logo); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+body[data-page="accueil"][data-lang="es"] .logo{ background:var(--flag-es-logo); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+
 body[data-page="accueil"] .main-nav a{
   color:var(--h-tx2);
   font-family:'Inter',sans-serif;
@@ -58,6 +96,7 @@ body[data-page="accueil"] .main-nav a{
 body[data-page="accueil"] .main-nav a:hover,
 body[data-page="accueil"] .main-nav a.active{ color:var(--h-tx); }
 body[data-page="accueil"] .main-nav a.nav-disabled{ color:var(--h-tx2); opacity:.5; }
+body[data-page="accueil"] .main-nav a.nav-disabled::after{ content:attr(data-suffix); font-size:.68rem; }
 body[data-page="accueil"] .nav-toggle{
   border-color:var(--h-brd); color:var(--h-tx); background:var(--h-surface);
 }
@@ -67,6 +106,33 @@ body[data-page="accueil"] .nav-toggle{
   }
   body[data-page="accueil"] .main-nav a{ border-bottom:1px solid var(--h-brd); }
 }
+
+/* ══ CONTRÔLES HEADER — langue + thème ════════════════════════════════ */
+body[data-page="accueil"] .header-controls{
+  display:flex; align-items:center; gap:.5rem;
+}
+body[data-page="accueil"] .lang-switch{
+  display:flex; align-items:center; gap:.2rem;
+  background:var(--h-surface); border:1px solid var(--h-brd);
+  border-radius:999px; padding:.2rem;
+}
+body[data-page="accueil"] .lang-switch button{
+  font-family:'Inter',sans-serif; font-weight:600; font-size:.68rem;
+  letter-spacing:.03em; color:var(--h-tx2);
+  background:transparent; border:none; border-radius:999px;
+  padding:.35rem .6rem; transition:all .15s ease;
+}
+body[data-page="accueil"] .lang-switch button:hover{ color:var(--h-tx); }
+body[data-page="accueil"] .lang-switch button.active{
+  background:var(--h-grad); color:#fff;
+}
+body[data-page="accueil"] .theme-toggle{
+  display:flex; align-items:center; justify-content:center;
+  width:36px; height:36px; border-radius:999px;
+  background:var(--h-surface); border:1px solid var(--h-brd);
+  font-size:1rem;
+}
+body[data-page="accueil"] .theme-toggle:hover{ border-color:var(--h-accent); }
 
 /* ══ HERO ══════════════════════════════════════════════════ */
 body[data-page="accueil"] .hero{
@@ -82,6 +148,9 @@ body[data-page="accueil"] .hero::before{
   background:radial-gradient(circle,rgba(255,107,74,.14) 0%,rgba(255,184,76,.08) 45%,transparent 72%);
   z-index:-1;
   pointer-events:none;
+}
+body[data-page="accueil"][data-theme="dark"] .hero::before{
+  background:radial-gradient(circle,rgba(255,107,74,.22) 0%,rgba(255,184,76,.12) 45%,transparent 72%);
 }
 body[data-page="accueil"] .hero .eyebrow{
   display:inline-flex; align-items:center; gap:.4rem;
@@ -134,7 +203,7 @@ body[data-page="accueil"] .cat-card{
   border-radius:var(--h-radius);
   padding:1.8rem 1.6rem;
   box-shadow:var(--h-shadow);
-  transition:transform .2s ease, box-shadow .2s ease;
+  transition:transform .2s ease, box-shadow .2s ease, background .25s ease, border-color .25s ease;
 }
 body[data-page="accueil"] .cat-card:hover{
   border-color:var(--h-brd);
@@ -159,7 +228,7 @@ body[data-page="accueil"] .prod-card{
   border-radius:var(--h-radius);
   padding:1.6rem;
   box-shadow:var(--h-shadow);
-  transition:transform .2s ease, box-shadow .2s ease;
+  transition:transform .2s ease, box-shadow .2s ease, background .25s ease, border-color .25s ease;
 }
 body[data-page="accueil"] .prod-card:hover{
   transform:translateY(-4px);
@@ -185,6 +254,7 @@ body[data-page="accueil"] .empty-state{ color:var(--h-tx2); }
 body[data-page="accueil"] .site-footer{
   border-top:1px solid var(--h-brd);
   background:var(--h-surface);
+  transition:background .25s ease, border-color .25s ease;
 }
 body[data-page="accueil"] .footer-inner{ color:var(--h-tx2); }
 body[data-page="accueil"] .footer-inner a{ color:var(--h-tx2); }
