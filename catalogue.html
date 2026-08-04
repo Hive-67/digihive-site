@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalogue — DigiHive</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="catalogue">
+
+<div class="hive-stripe"></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">⬡ DigiHive</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="categorie.html?type=template">Templates Discord</a>
+      <a href="categorie.html?type=logiciel">Logiciels</a>
+      <a href="categorie.html?type=formation">Formations</a>
+      <a href="categorie.html?type=service">Services</a>
+      <a href="compte.html" class="nav-disabled">Compte</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main class="wrap section">
+  <div class="section-head">
+    <span class="eyebrow">Catalogue</span>
+    <h2>Tous les produits</h2>
+    <p>Filtre par catégorie ou parcours l'ensemble du catalogue.</p>
+  </div>
+
+  <div class="filters" id="catalogue-filters"></div>
+  <div class="prod-grid" id="catalogue-grid"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>⬡ DigiHive — Powered by HiveOS</span>
+    <span><a href="mailto:systemhiveos@gmail.com">systemhiveos@gmail.com</a> · Discord #Hive_67</span>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
