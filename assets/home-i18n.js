@@ -17,6 +17,10 @@ const HOME_I18N = {
       ctaPrimary: 'Discover the concept',
       ctaGhost: 'Browse the catalogue'
     },
+    showcase: {
+      eyebrow: 'In practice',
+      title: 'Your idea, turned into an application'
+    },
     concept: {
       eyebrow: 'The concept',
       title: 'Build an app that actually looks like you',
@@ -76,6 +80,10 @@ const HOME_I18N = {
       text: 'Software, servidores, sistemas. Tú tienes la idea, nosotros nos encargamos de la técnica. Listo para usar, evolutivo al infinito y a precio justo.',
       ctaPrimary: 'Descubrir el concepto',
       ctaGhost: 'Ver el catálogo'
+    },
+    showcase: {
+      eyebrow: 'Concretamente',
+      title: 'Tu idea, convertida en aplicación'
     },
     concept: {
       eyebrow: 'El concepto',
