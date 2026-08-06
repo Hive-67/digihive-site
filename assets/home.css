@@ -84,14 +84,27 @@ body[data-page="accueil"][data-theme="dark"] .site-header{
 }
 
 body[data-page="accueil"] .logo{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  background:none;
+  -webkit-text-fill-color:initial;
+}
+body[data-page="accueil"] .logo-icon{
+  width:32px;
+  height:auto;
+  flex-shrink:0;
+}
+body[data-page="accueil"] .logo-text{
   font-family:'Sora',sans-serif;
   font-weight:800;
+  font-size:1.15rem;
   background:var(--flag-fr-logo);
   -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
   transition:background .3s ease;
 }
-body[data-page="accueil"][data-lang="en"] .logo{ background:var(--flag-en-logo); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-body[data-page="accueil"][data-lang="es"] .logo{ background:var(--flag-es-logo); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+body[data-page="accueil"][data-lang="en"] .logo-text{ background:var(--flag-en-logo); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+body[data-page="accueil"][data-lang="es"] .logo-text{ background:var(--flag-es-logo); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 
 body[data-page="accueil"] .main-nav a{
   color:var(--h-tx2);
@@ -413,6 +426,43 @@ body[data-page="accueil"] .badge-exemple{
   color:var(--h-tx2); border:1px dashed var(--h-brd);
 }
 body[data-page="accueil"] .empty-state{ color:var(--h-tx2); }
+
+/* ══ SIGNATURE — le logo qui s'assemble au scroll ══════════════════════════════ */
+body[data-page="accueil"] .signature-stage{
+  display:flex; flex-direction:column; align-items:center; gap:1.4rem;
+  padding:1.5rem 0 1rem;
+}
+body[data-page="accueil"] .signature-icon{
+  width:200px; height:auto;
+  overflow:visible;
+}
+body[data-page="accueil"] .sig-piece{
+  transform-box:fill-box;
+  transform-origin:center;
+  transform:translate(calc(var(--fx) * 1px), calc(var(--fy) * 1px)) rotate(var(--frot)) scale(.5);
+  opacity:0;
+  transition:transform 1.1s cubic-bezier(.2,.8,.2,1) var(--d), opacity .7s ease var(--d);
+}
+body[data-page="accueil"] .signature-stage.assembled .sig-piece{
+  transform:translate(0,0) rotate(0deg) scale(1);
+  opacity:1;
+}
+body[data-page="accueil"] .signature-wordmark{
+  font-family:'Sora',sans-serif; font-weight:800; font-size:1.8rem;
+  opacity:0; transform:translateY(12px);
+  transition:opacity .8s ease .9s, transform .8s ease .9s;
+}
+body[data-page="accueil"] .signature-stage.assembled .signature-wordmark{
+  opacity:1; transform:translateY(0);
+}
+body[data-page="accueil"] .wm-digi{ color:var(--h-tx); }
+body[data-page="accueil"] .wm-hive{
+  background:var(--h-grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+@media (prefers-reduced-motion:reduce){
+  body[data-page="accueil"] .sig-piece,
+  body[data-page="accueil"] .signature-wordmark{ transition:none; transform:none; opacity:1; }
+}
 
 /* ══ FOOTER ═════════════════════════════════════════════════ */
 body[data-page="accueil"] .site-footer{

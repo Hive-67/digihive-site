@@ -21,6 +21,10 @@ const HOME_I18N = {
       eyebrow: 'In practice',
       title: 'Your idea, turned into an application'
     },
+    signature: {
+      eyebrow: 'The brand',
+      title: 'DigiHive, built piece by piece'
+    },
     concept: {
       eyebrow: 'The concept',
       title: 'Build an app that actually looks like you',
@@ -84,6 +88,10 @@ const HOME_I18N = {
     showcase: {
       eyebrow: 'Concretamente',
       title: 'Tu idea, convertida en aplicación'
+    },
+    signature: {
+      eyebrow: 'La marca',
+      title: 'DigiHive, pensado pieza por pieza'
     },
     concept: {
       eyebrow: 'El concepto',
