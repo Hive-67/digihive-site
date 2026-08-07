@@ -23,7 +23,7 @@ const HOME_I18N = {
     },
     signature: {
       eyebrow: 'The brand',
-      title: 'DigiHive, built piece by piece'
+      title: 'The DigiHive identity'
     },
     concept: {
       eyebrow: 'The concept',
@@ -91,7 +91,7 @@ const HOME_I18N = {
     },
     signature: {
       eyebrow: 'La marca',
-      title: 'DigiHive, pensado pieza por pieza'
+      title: 'La identidad DigiHive'
     },
     concept: {
       eyebrow: 'El concepto',
